@@ -1,0 +1,198 @@
+:root {
+  --black: #080808;
+  --black-soft: #121212;
+  --gold: #d9a441;
+  --gold-light: #f1c86a;
+  --cream: #fff7e6;
+  --white: #ffffff;
+  --muted: #d8d0c2;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+header, .site-header, nav {
+  background: var(--black);
+}
+
+.site-header, header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(217,164,65,.35);
+}
+
+nav, .navbar, .nav-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo, .brand, .navbar-brand {
+  color: var(--gold-light);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.logo small, .brand small { display:block; font: 600 .65rem Arial, sans-serif; letter-spacing: 2px; color: var(--cream); }
+
+nav ul, .nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+nav a, .nav-links a {
+  font-size: .86rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+nav a:hover, .nav-links a:hover { color: var(--gold-light); }
+
+button, .btn, .button, .order-btn, .cta {
+  display: inline-block;
+  border: 1px solid var(--gold);
+  background: var(--gold);
+  color: #111;
+  padding: 11px 20px;
+  border-radius: 4px;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn-outline, .secondary-btn {
+  background: transparent;
+  color: var(--cream);
+}
+
+.hero, #home {
+  min-height: 480px;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: 34px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 70px 24px;
+  background: radial-gradient(circle at 75% 35%, #2a1b0a 0, #0b0b0b 38%, #080808 72%);
+}
+.hero-content { max-width: 620px; }
+.hero .eyebrow, .kicker {
+  color: var(--gold-light);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  margin: 0 0 2px;
+}
+.hero h1, #home h1 {
+  margin: 0 0 16px;
+  color: var(--cream);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  line-height: 1.02;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.hero p, #home p { color: #eee3d0; font-size: 1.05rem; max-width: 650px; }
+.hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin: 24px 0 16px; }
+.phone, .contact-phone { color: var(--cream); font-weight: 700; }
+
+section { padding: 62px 24px; }
+section > .container, .container { max-width: 1180px; margin: 0 auto; }
+section h2 {
+  color: var(--gold-light);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+  margin: 0 0 12px;
+}
+.section-subtitle { text-align:center; color:var(--muted); margin:0 auto 34px; max-width:720px; }
+
+.menu-grid, .food-grid, .products, .cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+.card, .menu-item, .food-card, .product-card {
+  background: #111;
+  border: 1px solid rgba(217,164,65,.42);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+.card img, .menu-item img, .food-card img, .product-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.card-content, .menu-item-content, .food-card-content { padding: 16px; }
+.card h3, .menu-item h3, .food-card h3, .product-card h3 {
+  color: var(--gold-light);
+  font-family: Georgia, 'Times New Roman', serif;
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+}
+.card p, .menu-item p, .food-card p, .product-card p { color:#ddd2c0; margin:0; font-size:.94rem; }
+
+#catering, #wholesale, .catering, .wholesale { background: #0d0d0d; }
+.two-column { display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:start; }
+.feature-list { list-style:none; padding:0; }
+.feature-list li { margin: 10px 0; color:#eee3d0; }
+.feature-list li::before { content:'✓'; color:var(--gold-light); font-weight:900; margin-right:9px; }
+
+#about, .about { background: linear-gradient(180deg,#090909,#15100a); }
+#contact, .contact { background:#0a0a0a; }
+
+footer, .footer {
+  background: #050505;
+  color: #cfc5b5;
+  border-top: 1px solid rgba(217,164,65,.35);
+  padding: 32px 24px;
+  text-align: center;
+  font-size: .9rem;
+}
+footer a { color: var(--gold-light); }
+
+/* Decorative West-African-inspired gold bands */
+.pattern-band, .african-pattern {
+  height: 14px;
+  background: repeating-linear-gradient(45deg, var(--gold) 0 8px, #111 8px 16px, var(--gold-light) 16px 20px, #111 20px 28px);
+}
+
+/* Makes plain HTML sections look polished even when custom class names differ */
+main h3 { color: var(--gold-light); }
+main p { color: #eee3d0; }
+main > h2, main > h3, main > p { max-width:1180px; margin-left:auto; margin-right:auto; }
+
+@media (max-width: 900px) {
+  .hero, #home { grid-template-columns: 1fr; min-height:auto; padding-top:48px; }
+  .menu-grid, .food-grid, .products, .cards { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .two-column { grid-template-columns:1fr; }
+  nav ul, .nav-links { gap: 12px; flex-wrap: wrap; justify-content:flex-end; }
+}
+
+@media (max-width: 620px) {
+  nav, .navbar, .nav-container { align-items:flex-start; padding:12px 16px; }
+  nav ul, .nav-links { gap:8px 12px; }
+  nav a, .nav-links a { font-size:.72rem; }
+  .hero, #home { padding: 44px 18px; }
+  section { padding: 44px 18px; }
+  .menu-grid, .food-grid, .products, .cards { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction:column; align-items:flex-start; }
+}
